@@ -4,12 +4,12 @@
 //===============================================
 void GPort_Write(const uchar d) {
     PORT_CONF = 0x00;
-    PORT_DATA = d;
+    PORT = d;
 }
 //===============================================
 uchar GPort_Read() {
     PORT_CONF = 0xFF;
-    return PORT_DATA;
+    return PORT;
 }
 //===============================================
 void GPort_Bit_Write(const uchar pin, const uchar d) {
@@ -17,10 +17,10 @@ void GPort_Bit_Write(const uchar pin, const uchar d) {
     m_pin <<= pin;
     PORT_CONF &= ~m_pin;
     if(d == TRUE) {
-        PORT_DATA |= m_pin;
+        PORT |= m_pin;
         return;
     }
-    PORT_DATA &= ~m_pin;
+    PORT &= ~m_pin;
 }
 //===============================================
 uchar GPort_Bit_Read(const uchar pin) {
@@ -28,7 +28,7 @@ uchar GPort_Bit_Read(const uchar pin) {
     uchar m_data;
     m_pin <<= pin;
     PORT_CONF |= m_pin;
-    m_data = PORT_DATA & m_pin;
+    m_data = PORT & m_pin;
     if(m_data == 0) return 0;
     return 1;
 }

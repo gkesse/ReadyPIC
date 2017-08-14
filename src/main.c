@@ -1,9 +1,11 @@
 //===============================================
 #include "GPort.h"
+#include "GPortDef.h"
 //===============================================
 void main() {
     while(1) {
-        GPort_Bit_Write(7, GPort_Bit_Read(0));
+        OUTPUT_CONF = 0x00;
+        OUTPUT = GPort_Read();
     }
 }
 //===============================================

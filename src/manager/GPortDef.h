@@ -3,7 +3,10 @@
 #define _GPortDef_
 //===============================================
 #define PORT_CONF TRISB
-#define PORT_DATA PORTB
+#define PORT PORTB
+//===============================================
+#define OUTPUT_CONF TRISD
+#define OUTPUT PORTD
 //===============================================
 #endif
 //===============================================
