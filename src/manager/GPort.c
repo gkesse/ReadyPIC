@@ -3,8 +3,8 @@
 #include "GPortDef.h"
 //===============================================
 void GPort_Write(const uchar d) {
-    LED_CONF = 0x00;
-    LED0 = LED_ON;
+    PORT_CONF = 0x00;
+    PORT = d;
 }
 //===============================================
 uchar GPort_Read() {
