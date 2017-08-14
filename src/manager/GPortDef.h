@@ -4,20 +4,23 @@
 //===============================================
 #define PORT_CONF TRISB
 #define PORT PORTB
+#define PIN0 PORT.B0
+#define PIN1 PORT.B1
+#define PIN2 PORT.B2
+#define PIN3 PORT.B3
+#define PIN4 PORT.B4
+#define PIN5 PORT.B5
+#define PIN6 PORT.B6
+#define PIN7 PORT.B7
 //===============================================
 #define OUTPUT_CONF TRISD
 #define OUTPUT PORTD
 //===============================================
 #define LED_CONF TRISB
 #define LED PORTB
-#define LED0 LED.B0
-#define LED1 LED.B1
-#define LED2 LED.B2
-#define LED3 LED.B3
-#define LED4 LED.B4
-#define LED5 LED.B5
-#define LED6 LED.B6
-#define LED7 LED.B7
+//===============================================
+#define G7SEG_CONF TRISB
+#define G7SEG PORTB
 //===============================================
 #endif
 //===============================================

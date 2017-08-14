@@ -1,8 +1,9 @@
 //===============================================
 #include "GLed.h"
 #include "GPortDef.h"
-#include "GDataMap.h"
-#include "GGlobal.h"
+//===============================================
+extern uchar code Led_Chasing_DM[];
+extern uchar code Led_Dice_DM[];
 //===============================================
 static uchar Led_Chasing_X;
 static uchar Led_Chasing_Y;
@@ -66,11 +67,17 @@ void GLed_Chasing_Ring(uchar n) {
 //===============================================
 void GLed_Chasing_Linear(uchar n) {
     LED = ~GLed_Get_Data_Linear(Led_Chasing_Y, n, 8); 
-    ++Led_Chasing_Y;
+    Led_Chasing_Y++;
 }
 //===============================================
 void GLed_Chasing_Pattern() {
     LED = ~GLed_Get_Data_Pattern(Led_Chasing_Y, "11011"); 
-    ++Led_Chasing_Y;
+    Led_Chasing_Y++;
+}
+//===============================================
+void GLed_Dice() {
+    uchar m_index = Led_Chasing_Y % 6;
+    LED = ~Led_Dice_DM[m_index]; 
+    Led_Chasing_Y++;
 }
 //===============================================

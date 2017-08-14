@@ -9,6 +9,7 @@ void GLed_Chasing_Selected();
 void GLed_Chasing_Ring(uchar n);
 void GLed_Chasing_Linear(uchar n);
 void GLed_Chasing_Pattern();
+void GLed_Dice();
 //===============================================
 #endif
 //===============================================

@@ -1,10 +1,10 @@
 //===============================================
-#include "GLed.h"
+#include "G7Seg.h"
 //===============================================
 void main() {
-    GLed_Init();
+    G7Seg_Init();
     while(1) {
-        GLed_Chasing_Pattern();
+        G7Seg_Count();
         Delay_ms(1000);
     }
 }
