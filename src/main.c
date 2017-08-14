@@ -3,10 +3,7 @@
 //===============================================
 void main() {
     while(1) {
-        GPort_Bit_Write(7, 0);
-        Delay_ms(1000);
-        GPort_Bit_Write(7, 1);
-        Delay_ms(1000);
+        GPort_Bit_Write(7, GPort_Bit_Read(0));
     }
 }
 //===============================================
