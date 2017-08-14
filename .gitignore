@@ -1,0 +1,26 @@
+#================================================
+# MikroC Compiler
+#================================================
+
+mikroC/*bmk
+mikroC/*brk
+mikroC/*cfg
+mikroC/*dbg
+mikroC/*dct
+mikroC/*dlt
+mikroC/*log
+mikroC/*lst
+mikroC/*txt
+mikroC/*dic
+
+src/**/*asm
+src/**/*ini
+src/**/*cp
+src/**/*mcl
+
+#================================================
+# Proteus
+#================================================
+
+proteus/*pdsbak
+proteus/*workspace
