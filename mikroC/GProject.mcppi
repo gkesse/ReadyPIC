@@ -6,7 +6,7 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=..\src\main.c
+Value=..\src\manager\gportdef.h
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -25,7 +25,11 @@ Count=0
 Count=0
 ActiveImageIndex=-1
 [OPENED_FILES]
-Count=0
+Count=4
+File0=..\src\main.c
+File1=..\src\manager\GLed.c
+File2=..\src\manager\GPort.c
+File3=..\src\manager\gportdef.h
 [EEPROM]
 Count=0
 [ACTIVE_COMMENTS_FILES]
