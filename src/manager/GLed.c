@@ -1,18 +1,21 @@
 //===============================================
 #include "GLed.h"
 #include "GPortDef.h"
+#include "GDataMap.h"
 //===============================================
-static uchar Led_Chasing;
+static uchar Led_Chasing_X;
+static uchar Led_Chasing_Y;
 //===============================================
 void GLed_Init() {
     LED_CONF = 0x00;
     LED = 0xFF;
-    Led_Chasing = 0x01;
+    Led_Chasing_X = 2;
+    Led_Chasing_Y = 0;
 }
 //===============================================
 void GLed_Chasing() {
-    LED = ~Led_Chasing;
-    Led_Chasing >>= 1;
-    if(Led_Chasing == 0x00) Led_Chasing = 0x80;
+    uchar m_index = 8*Led_Chasing_X + Led_Chasing_Y; 
+    LED = ~Led_Chasing_DM[m_index];
+    if(++Led_Chasing_Y >= 8) Led_Chasing_Y = 0;
 }
 //===============================================
