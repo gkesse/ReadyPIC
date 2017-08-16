@@ -19,6 +19,25 @@ src/**/*cp
 src/**/*mcl
 
 #================================================
+# CCS C Compiler
+#================================================
+
+ccs/**/*ccspjt
+ccs/**/*ccspjt
+ccs/**/Makefile
+ccs/**/build/
+ccs/**/debug/
+ccs/**/nbproject/
+ccs/**/*STA
+ccs/**/*cof
+ccs/**/*err
+ccs/**/*esym
+ccs/**/*lst
+ccs/**/*sym
+ccs/**/*tre
+ccs/**/*xsym
+
+#================================================
 # Proteus
 #================================================
 

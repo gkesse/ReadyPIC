@@ -1,15 +1,10 @@
 //===============================================
-#include "GSch.h"
-#include "GStateMachine.h"
+#include "GPort.h"
 //===============================================
 void main() {
-    GSch_Init();
-    GState_Init();
-    GSch_Add_Task(GState_Light_L1, 0, 1000);
-    GSch_Add_Task(GState_Light_L2, 1, 1000);
-    GSch_Start();
-    while(1) {
-        GSch_Dispatch_Tasks();
+    GPort_Write(0xFF);
+    while(TRUE) {
+        GPort_Bit_Write(7, GPort_Bit_Read(0));
     }
 }
 //===============================================

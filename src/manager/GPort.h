@@ -4,10 +4,10 @@
 //===============================================
 #include "GTypeDef.h"
 //===============================================
-void GPort_Write(const uchar d);
+void GPort_Write(GConst uchar d);
 uchar GPort_Read();
-void GPort_Bit_Write(const uchar pin, const uchar d);
-uchar GPort_Bit_Read(const uchar pin);
+void GPort_Bit_Write(GConst uchar pin, GConst uchar d);
+uchar GPort_Bit_Read(GConst uchar pin);
 //===============================================
 #endif
 //===============================================

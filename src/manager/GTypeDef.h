@@ -2,6 +2,18 @@
 #ifndef _GTypeDef_
 #define _GTypeDef_
 //===============================================
+#ifdef GCCSC
+#include <18F442.h>
+#fuses HS,NOLVP,NOWDT,NOPROTECT
+#use delay (clock=4000000)
+#endif
+//===============================================
+#ifdef GCCSC
+#define GConst 
+#else
+#define GConst const
+#endif
+//===============================================
 typedef unsigned char uchar;
 typedef unsigned int uint;
 typedef unsigned long ulong;
@@ -14,8 +26,10 @@ typedef unsigned long ulong;
 #define GTF0 INTCON.TMR0IF
 #define GEA INTCON.GIE
 //===============================================
+#ifndef TRUE
 #define FALSE (0)
 #define TRUE (!FALSE)
+#endif
 //===============================================
 #define LED_OFF (1)
 #define LED_ON (!LED_OFF)
