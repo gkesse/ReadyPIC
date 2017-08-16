@@ -2,9 +2,13 @@
 #include "GPort.h"
 //===============================================
 void main() {
-    GPort_Write(0xFF);
+    static uchar ok = 0;
     while(TRUE) {
-        GPort_Bit_Write(7, GPort_Bit_Read(0));
+        ok = !ok;
+        GPort_Bit_Write(7, ok);
+        GPort_Bit_Write(1, ok);
+        GPort_Bit_Write(4, ok);
+        delay_ms(1000);
     }
 }
 //===============================================

@@ -2,6 +2,8 @@
 #include "GPort.h"
 #include "GPortDef.h"
 //===============================================
+static uchar m_pin;
+//===============================================
 void GPort_Write(GConst uchar d) {
 #ifdef GCCSC
     PORT_CONF_WR(0x00);
@@ -11,7 +13,6 @@ void GPort_Write(GConst uchar d) {
     PORT = d;
 #endif
 }
-
 //===============================================
 uchar GPort_Read() {
     uchar m_data;
@@ -26,8 +27,8 @@ uchar GPort_Read() {
 }
 //===============================================
 void GPort_Bit_Write(GConst uchar pin, GConst uchar d) {
-    uchar m_pin = 0x01;
     uchar m_data;
+    m_pin = 0x01;
     m_pin <<= pin;
 #ifdef GCCSC
     m_data = PORT_CONF_RD();
@@ -52,10 +53,9 @@ void GPort_Bit_Write(GConst uchar pin, GConst uchar d) {
 }
 //===============================================
 uchar GPort_Bit_Read(GConst uchar pin) {
-    uchar m_pin = 0x01;
     uchar m_data;
+    m_pin = 0x01;
     m_pin <<= pin;
-
 #ifdef GCCSC
     m_data = PORT_CONF_RD();
     m_data |= m_pin;
