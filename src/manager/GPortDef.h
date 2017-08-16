@@ -13,6 +13,15 @@
 #define PIN6 PORT.B6
 #define PIN7 PORT.B7
 //===============================================
+#define LIGHT_CONF TRISB
+#define LIGHT PORTB
+#define LIGHT_RED_L1 	PORT.B0
+#define LIGHT_AMBER_L1 	PORT.B1
+#define LIGHT_GREEN_L1 	PORT.B2
+#define LIGHT_RED_L2 	PORT.B5
+#define LIGHT_AMBER_L2 	PORT.B6
+#define LIGHT_GREEN_L2  PORT.B7
+//===============================================
 #define OUTPUT_CONF TRISD
 #define OUTPUT PORTD
 //===============================================
@@ -21,6 +30,7 @@
 //===============================================
 #define G7SEG_CONF TRISB
 #define G7SEG PORTB
+#define G7SEG_COM G7SEG.B7
 //===============================================
 #endif
 //===============================================
