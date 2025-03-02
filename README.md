@@ -1,26 +1,24 @@
 # Auteur
 
-Je suis 
-[Gerard KESSE](http://31.33.37.71:8855/presentation/ "AccÈdez ‡ mon site web (ReadyDev)"),  
-IngÈnieur en DÈveloppement Informatique C/C++/Qt,  
-Avec ‡ la fois des compÈtences en SystËmes EmbarquÈs et en Robotique.  
+Je suis **Gerard KESSE**,  
+Ing√©nieur en D√©veloppement Informatique C/C++/Qt,  
+Avec √† la fois des comp√©tences en Syst√®mes Embarqu√©s et en Robotique.  
 
-* Site Web : [ReadyDev](http://31.33.37.71:8855 "AccÈdez ‡ mon site web (ReadyDev)")
-* Email : [tiakagerard@hotmail.com](mailto:tiakagerard@hotmail.com?subject=Contact&body=Bonjour "Me contactez par email")
-* Tel : [(+33) 06.58.77.23.97](tel:00330658772397 "Contactez-moi")
-* LocalitÈ : **Toulouse - France**
+* Site Web : [ReadyDev](https://readydev.ovh/home/ "Acc√©dez √† mon site web (ReadyDev)")
+* Contact : [LinkedIn](https://www.linkedin.com/in/tia-gerard-kesse/ "Envoyez-moi un message sur (LinkedIn)")
+* Localit√© : **Strasbourg - France**
 
 # ReadyTTA
 
-**ReadyTTA** est une bibliothËque de fonctions C pour le dÈveloppement de systËmes 
-embarquÈs multit‚ches temps rÈel. Elle est construite autour de l'architecture TTA 
-(Time Triggered Architecture), une architecture logicielle dÈclenchÈe par le temps et 
-certifiÈe pour le dÈveloppement de systËmes de sÈcuritÈ critique. Elle est portable 
-sur plusieurs cibles de microcontrÙleurs (8051, PIC) et de microprocesseurs (ARM). 
-C'est une bibliothËque dÈveloppÈe en C et maintenu par 
-[Gerard KESSE](http://31.33.37.71:8855/presentation/ "AccÈdez ‡ mon site web (ReadyDev)").
+**ReadyTTA** est une biblioth√®que de fonctions C pour le d√©veloppement de syst√®mes 
+embarqu√©s multit√¢ches temps r√©el. Elle est construite autour de l'architecture TTA 
+(Time Triggered Architecture), une architecture logicielle d√©clench√©e par le temps et 
+certifi√©e pour le d√©veloppement de syst√®mes de s√©curit√© critique. Elle est portable 
+sur plusieurs cibles de microcontr√¥leurs (8051, PIC) et de microprocesseurs (ARM). 
+C'est une biblioth√®que d√©velopp√©e en C et maintenu par 
+[Gerard KESSE](http://31.33.37.71:8855/presentation/ "Acc√©dez √† mon site web (ReadyDev)").
 
-# SystËme d'Exploitation EmbarquÈ Simple
+# Syst√®me d'Exploitation Embarqu√© Simple
 
 ```
 #include "GSeos.h"
@@ -36,7 +34,7 @@ void main() {
 }
 ```
 
-# Ordonnancement CoopÈratif
+# Ordonnancement Coop√©ratif
 
 ```
 #include "GSch.h"
@@ -54,14 +52,14 @@ void main() {
 }
 ```
 
-* **Structure d'une T‚che**
+* **Structure d'une T√¢che**
 
 ```
 typedef data struct {
-    void (*pTask)();    // pointeur de t‚che
-    uint delay;         // delai ou retard d'exÈcution
-    uint period;        // periode d'exÈcution
-    uchar runMe;        // drapeau d'exÈcution
+    void (*pTask)();    // pointeur de t√¢che
+    uint delay;         // delai ou retard d'ex√©cution
+    uint period;        // periode d'ex√©cution
+    uchar runMe;        // drapeau d'ex√©cution
 } GTask;
 ```
 
@@ -74,8 +72,8 @@ typedef data struct {
 void main() {
     GSch_Init();
     GLed_Init();
-    GSch_Add_Task(GLed_Short, 0, 1000, 1); // t‚che coopÈrative
-    GSch_Add_Task(GLed_Long, 1, 20000, 0); // t‚che prÈemptive
+    GSch_Add_Task(GLed_Short, 0, 1000, 1); // t√¢che coop√©rative
+    GSch_Add_Task(GLed_Long, 1, 20000, 0); // t√¢che pr√©emptive
     GSch_Start();
     while(1) {
         GSch_Dispatch_Tasks();
@@ -83,27 +81,27 @@ void main() {
 }
 ```
 
-* **Structure d'une T‚che**
+* **Structure d'une T√¢che**
 
 ```
 typedef data struct {
-    void (*pTask)();    // pointeur de t‚che
-    uint delay;         // delai ou retard d'exÈcution
-    uint period;        // periode d'exÈcution
-    uchar runMe;        // drapeau d'exÈcution
-    uchar coop;         // t‚che coopÈrative/prÈemptive
+    void (*pTask)();    // pointeur de t√¢che
+    uint delay;         // delai ou retard d'ex√©cution
+    uint period;        // periode d'ex√©cution
+    uchar runMe;        // drapeau d'ex√©cution
+    uchar coop;         // t√¢che coop√©rative/pr√©emptive
 } GTask;
 ```
 
 # Technologies
 
-Le dÈveloppement de la bibliothËque **ReadyTTA** a nÈcessitÈ les technologies suivantes :
+Le d√©veloppement de la biblioth√®que **ReadyTTA** a n√©cessit√© les technologies suivantes :
 
 * Langage : **C**
-* MicrocontrÙleur 8051 : **AT89C52, INFINEON C515**
-* MicrocontrÙleur PIC : **PIC18F452**
+* Microcontr√¥leur 8051 : **AT89C52, INFINEON C515**
+* Microcontr√¥leur PIC : **PIC18F452**
 * Microprocesseur ARM : **LPC1769**
-* IDE 8051: **Keil µVision**
+* IDE 8051: **Keil ¬µVision**
 * IDE PIC: **MPLab**
 * IDE ARM: **GNU ARM Eclipse**
 * Compilateur 8051 : **SDDC**
